@@ -4,7 +4,7 @@
 #ifndef LT
 #define LT(A, B) ((A) < (B))
 #endif
-
+//test avl//
 struct AVLnode {
     int value;
     struct AVLnode *left;
@@ -39,6 +39,7 @@ void destroyAVLTree(struct AVLTree * tree) {
     free(tree);
     tree = 0;
 }
+
 //rotate//
 struct AVLnode * rotateLeft(struct AVLnode * current) {
     struct AVLnode * a = current->right;
@@ -189,6 +190,7 @@ struct AVLnode * _removeNode(struct AVLnode *cur, int val) {
     }
     return balance(cur);
 }
+
 //removeNode//
 void removeAVLTree(struct AVLTree *tree, int val) {
     if (containsAVLTree(tree, val)) {
